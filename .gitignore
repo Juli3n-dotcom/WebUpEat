@@ -17,7 +17,9 @@
 *.userosscache
 *.sln.docstates
 /SQL/*
+/Global/Config/Parametres.php
 /Global/Uploads/*
+/Admin/Assets/Uploads/*
 composer.phar
 /vendor/
 

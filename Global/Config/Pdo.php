@@ -12,7 +12,7 @@ try {
     ]
   );
 } catch (PDOException $e) {
-  die('Erreur de connexion раMySQL: ' . $e->getMessage());
+  die('Erreur de connexion à MySQL: ' . $e->getMessage());
 }
 
 ini_set('display_errors', 1);

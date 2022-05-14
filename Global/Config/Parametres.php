@@ -5,6 +5,7 @@ const DB_NAME = 'WebUpEat';
 const DB_USER = 'root';
 const DB_PASS = 'root';
 
+
 // version du site
 const VERSION = '1.0.0';
 
