@@ -156,7 +156,10 @@ require_once __DIR__ . '/../Config/Init.php';
         <img src='Assets/Uploads/Profil.png' alt='photo_profil_other'>
       </div>
       <div class="member_menu">
-        <h3>Roger</h3>
+        <div class="member_menu-title">
+          <h3>Roger</h3>
+          <p class="text-muted">Admin</p>
+        </div>
         <ul>
           <li>
             <span class="material-icons-sharp">assignment_ind</span>
@@ -321,20 +324,8 @@ require_once __DIR__ . '/../Config/Init.php';
       </li>
 
     </ul>
-  </div>
 
-  <div class="profile_content">
-    <div class="profile">
-      <div class="profile_details" id="profile_details">
-        <img src="Assets/Uploads/Profil.png" alt="Photo de profil">
-        <div class="name_job">
-          <div class="name">Roger</div>
-          <div class="job">Admin</div>
-        </div>
-      </div>
-      <a href="Assets/Src/Login/Logout.php" title="Déconnexion"> <span class="material-icons-sharp" id="log_out">logout</span></a>
-    </div>
-  </div>
+
 
 </section>
 

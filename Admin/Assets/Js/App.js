@@ -1,3 +1,4 @@
+const main = document.getElementById('main')
 
 // menu team member
 function menuTeamToggle() {
@@ -15,8 +16,6 @@ function menuTeamToggle() {
   //       toggleMenu.classList.remove('active')
   //   },20000)
   // }
-
-  const main = document.getElementById('main')
 
   main.addEventListener('click', () => {
     if (toggleMenu.classList.contains('active')) {
@@ -38,9 +37,9 @@ function menuNotifToggle() {
 
   
 
-  notifMenu.addEventListener('mouseleave', () => {
-   notifMenu.classList.remove('active')
-  })
+  // notifMenu.addEventListener('mouseleave', () => {
+  //  notifMenu.classList.remove('active')
+  // })
 
   // if (notifMenu.classList.contains('active')) {
   //   setTimeout(() => {
@@ -48,12 +47,10 @@ function menuNotifToggle() {
   //   },10000)
   // }
 
-  const main = document.getElementById('main')
-
   main.addEventListener('click', () => {
     if (notifMenu.classList.contains('active')) {
         notifMenu.classList.remove('active')
-  }
+    }
   })
 
   const toggleMenu = document.querySelector('.member_menu');
@@ -94,6 +91,13 @@ let sidebarMenuBtn = document.getElementById('sidebar-menu-btn');
 let closeMenuBtn = document.getElementById('close-btn');
 
 
+main.addEventListener('click', () => { 
+if (sidebar.classList.contains('active')) {
+       sidebar.classList.remove('active');
+    }
+})
+
+
 
 menuBtn.addEventListener('click', () => {
   sidebar.classList.add('active');
@@ -118,9 +122,14 @@ sidebarMenuBtn.addEventListener('click', () => {
 
 
 let arrow = document.querySelectorAll(".arrow");
+let profilContainer = document.querySelector('.sidebar .profile_content');
 for (var i = 0; i < arrow.length; i++) {
   arrow[i].addEventListener("click", (e) => {
-        let arrowParent = e.target.parentElement.parentElement.parentElement;//selecting main parent of arrow
-        arrowParent.classList.toggle("showMenu");
-      });
-    }
+    const canVibrate = window.navigator.vibrate
+    if (canVibrate) window.navigator.vibrate(100);
+
+     let arrowParent = e.target.parentElement.parentElement.parentElement;//selecting main parent of arrow
+    arrowParent.classList.toggle("showMenu");
+    });
+}
+    

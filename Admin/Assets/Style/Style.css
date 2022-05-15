@@ -150,16 +150,14 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  padding: 0 0.8rem;
+  padding: 0 1rem;
   height:4.6rem;
-  background-color: var(--color-white);
   width: 100%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 2;
-  box-shadow: 0 1rem 1rem var(--color-light);
   transition: all 0.5s ease;
 }
 
@@ -167,7 +165,7 @@ header button#menu-btn{
   display: inline-block;
   background: transparent;
   cursor: pointer;
-  color: var(--color-dark);
+  color: var(--color-info-dark);
   position: absolute;
   left:1rem;
 }
@@ -239,14 +237,17 @@ header button#menu-btn span{
   transition: 0.5s;
 }
 
-.header-menu .member_menu-action .member_menu h3 {
+.header-menu .member_menu-action .member_menu-title {
   text-align: center;
   width: 100%;
-  font-size: 18px;
-  padding: 20px 0;
-  font-weight: 500;
+  padding:0 auto;
   color: var(--color-info-dark);
   line-height: 1.2em;
+}
+
+.header-menu .member_menu-action .member_menu-title h3{
+font-size: 18px;
+font-weight: 500;
 }
 
 .header-menu .member_menu-action .member_menu ul {
@@ -552,15 +553,17 @@ background-color: var(--color-background);
   position: fixed;
   top: 0;
   left: -100%;
-  background: var(--color-background);
+  background: var(--color-white);
   transition: all 0.5s ease;
   z-index: 3;
   padding-right: var(--card-padding);
   box-shadow: var(--box-shadow);
+  /* overflow: auto; */
 }
 
 .sidebar.active{
   left:0;
+  overflow-y: auto;
 }
 
 .sidebar .sidebar-top #sidebar-menu-btn{
@@ -598,9 +601,11 @@ background-color: var(--color-background);
 
 .sidebar .nav-links{
   height: 100%;
-  overflow: auto;
+  /* overflow: auto; */
   margin-top: 20px;
 }
+
+
 
 .sidebar .sidebar-menu  ul li a{
   display: flex;
@@ -634,11 +639,12 @@ transition: all 0.5s ease;
   color: var(--color-info-dark);
   display: none;
   box-shadow: var(--box-shadow);
-  background-color: var(--color-white);
+  background-color: var(--color-background);
 }
 
 .sidebar .nav-links li.showMenu .sub-menu {
   display: block;
+  overflow: auto;
 }
 
 .sidebar .nav-links li span {
@@ -652,8 +658,9 @@ transition: all 0.5s ease;
 }
 
 .sidebar .nav-links li.showMenu{
-  background-color: var(--color-white);
+  background-color: var(--color-background);
   border-radius: var(--border-radius-2);
+  margin: 1rem 0;
 }
 
 .sidebar .nav-links li.showMenu .sub-menu{
@@ -679,76 +686,6 @@ transition: all 0.5s ease;
     margin-left: 1rem;
 }
 
-
-.sidebar .profile_content {
-  position: absolute;
-  color: var(--color-info-dark);
-  bottom: 0;
-  left: 0;
-  width: 100%;
-}
-
-.sidebar .profile_content .profile {
-  position: relative;
-  padding: 10px 6px;
-  height: 60px;
-  background-color: var(--color-background);
-}
-
-.profile_content .profile .profile_details {
-  display: flex;
-  align-items: center;
-  opacity: 0;
-  pointer-events: none;
-  white-space: nowrap;
-  transition: all 0.5s ease;
-}
-
-.sidebar.active .profile .profile_details {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.profile .profile_details img {
-  height: 40px;
-  width: 40px;
-  object-fit: cover;
-  border: 1px solid var(--color-dark-variant);
-  border-radius: 50%;
-}
-
-.profile .profile_details .name_job {
-  margin-left: 10px;
-}
-
-.profile .profile_details .name {
-  font-size: 15px;
-  font-weight: 400;
-}
-
-.profile .profile_details .job {
-  font-size: 12px;
-}
-
-.profile #log_out {
-  color: var(--color-info-dark);
-  position: absolute;
-  left: 50%;
-  bottom: 5px;
-  transform: translateX(-50%);
-  min-width: 50px;
-  line-height: 50px;
-  font-size: 20px;
-  border-radius: 12px;
-  text-align: center;
-  transition: all 0.5s ease;
-  /* background-color: var(--color-dark-variant); */
-}
-
-.sidebar.active .profile #log_out {
-  left: 88%;
-  background: none;
-}
 
 
 /* ---------- MAIN ---------- */
@@ -1003,13 +940,5 @@ display: none;
 .sidebar .nav-links li.showMenu .sub-menu li:hover a {
   color: var(--color-primary);
   margin-left: 1rem;
-}
-
-.profile_content .profile .profile_details{
-  opacity: 1;
-}
-
-.profile #log_out {
-  left: 88%;
 }
 }
